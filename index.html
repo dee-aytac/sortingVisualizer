@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting visualizer</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet"> 
+</head>
+<body onload="generateNewArray();">
+    <div class = "container">
+        <h1 class = "center">Sorting Visualizer</h1>
+        <canvas id = "canvas"></canvas>
+        <div class="options">
+            <span>Array size</span>
+            <br>
+            <span>-</span>
+            <input id="array-size" type="range" min="10" value="100" max="200" step="1">
+            <span>+</span>
+            <br>
+            <button onclick="generateNewArray();" class="myButton" type="button">
+                Generate new array
+            </button>
+            <hr>
+            <select name="algorithms" id="algorithm-select">
+                <option value="bubble-sort">Bubble Sort</option>
+                <option value="merge-sort">Merge Sort</option>
+                <option value="insertion-sort">Insertion Sort</option>
+                <option value="selection-sort">Selection Sort</option>
+                <option value="quick-sort">Quick Sort</option>
+                <option value="cocktail-sort">Cocktail Shaker Sort</option>
+            </select>
+            <hr>
+            <span>Sorting speed</span>
+            <br>
+            <span>-</span>
+            <input id="sort-speed" type="range" min="1" value="50" max="1000" step="1">
+            <span>+</span>
+            <br>
+            <button onclick="sort();" class="myButton" type="button">
+                Sort
+            </button>
+        </div>
+    </div>
+    
+    <script src="./src/main.js"></script>
+    <script src="./src/bubble_sort.js"></script>
+    <script src="./src/merge_sort.js"></script>
+    <script src="./src/insertion_sort.js"></script>
+    <script src="./src/selection_sort.js"></script>
+    <script src="./src/quick_sort.js"></script>
+    <script src="./src/cocktail_shaker_sort.js"></script>
+</body>
+</html>
